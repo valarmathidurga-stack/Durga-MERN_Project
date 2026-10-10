@@ -1,0 +1,174 @@
+
+/* ==========================================
+   CAMPUSPARK — COSMIC SPACE THEME
+   Global styles and high contrast
+========================================== */
+
+:root {
+  color-scheme: dark;
+
+  --space-bg: #070b18;
+  --space-surface: #0d1428;
+  --space-card: #111b35;
+  --space-card-hover: #172442;
+
+  --space-purple: #7c3aed;
+  --space-purple-light: #a78bfa;
+  --space-cyan: #06b6d4;
+  --space-blue: #3b82f6;
+
+  --space-white: #f8fafc;
+  --space-text: #cbd5e1;
+  --space-muted: #94a3b8;
+
+  --space-border: rgba(148, 163, 184, 0.2);
+  --space-glow: 0 0 28px rgba(124, 58, 237, 0.2);
+
+  --space-radius: 18px;
+  --space-transition: 0.3s ease;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 100px;
+  background: var(--space-bg);
+}
+
+body {
+  min-width: 320px;
+  min-height: 100vh;
+
+  font-family:
+    Inter,
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    Roboto,
+    Oxygen,
+    Ubuntu,
+    Cantarell,
+    sans-serif;
+
+  background: var(--space-bg);
+  color: var(--space-white);
+
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  overflow-x: hidden;
+}
+
+#root {
+  width: 100%;
+  min-height: 100vh;
+}
+
+::selection {
+  background: var(--space-purple);
+  color: #ffffff;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button,
+input,
+select,
+textarea {
+  font: inherit;
+}
+
+button {
+  cursor: pointer;
+}
+
+button:disabled {
+  opacity: 0.55;
+  cursor: not-allowed;
+}
+
+img,
+svg {
+  max-width: 100%;
+}
+
+img {
+  display: block;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: var(--space-white);
+  line-height: 1.2;
+}
+
+p {
+  color: var(--space-text);
+}
+
+code,
+pre {
+  font-family:
+    "SFMono-Regular",
+    Consolas,
+    "Liberation Mono",
+    monospace;
+}
+
+:focus-visible {
+  outline: 2px solid var(--space-cyan);
+  outline-offset: 4px;
+}
+
+::-webkit-scrollbar {
+  width: 9px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--space-bg);
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(
+    180deg,
+    var(--space-purple),
+    var(--space-cyan)
+  );
+  border-radius: 20px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--space-cyan);
+}
+
+@media (max-width: 768px) {
+  html {
+    scroll-padding-top: 75px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
